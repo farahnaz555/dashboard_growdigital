@@ -1,0 +1,16 @@
+{% load static %}
+<hr>
+
+<h1>  Services  </h1>
+<hr>
+
+
+{% for servicespage in servicesview %}
+
+<h3>{{ servicespage.title }}</h3>
+<br>
+<img src="{{ servicespage.icon.url }}" alt="">
+<br>
+<p>{{ servicespage.description }}</p>
+
+{% endfor %}

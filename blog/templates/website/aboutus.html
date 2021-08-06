@@ -1,0 +1,11 @@
+{% extends 'bizlerapp/base.html' %} {% load static %} {% block body %}
+
+<h1>About Us</h1>
+<hr />
+
+{% for aboutuspage in aboutusview %}
+
+<h3>{{ aboutuspage.title }}</h3>
+<p>{{ aboutuspage.description }}</p>
+
+{% endfor %}

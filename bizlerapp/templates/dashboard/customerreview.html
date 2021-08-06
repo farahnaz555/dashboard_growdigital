@@ -1,0 +1,322 @@
+{%load static %} {%include 'dashboard/include/layout.html'%}
+
+<!-- partial:partials/_navbar.html -->
+{%include 'dashboard/include/navbar.html'%}
+<!-- partial -->
+<div class="container-fluid page-body-wrapper">
+  <!-- partial:partials/_sidebar.html -->
+  {%include 'dashboard/include/sidebar.html'%}
+  <!-- partial -->
+  <div class="main-panel">
+    <div class="content-wrapper">
+      <div class="row page-title-header">
+        <div class="col-12">
+          <div class="page-header">
+            <h4 class="page-title">Customer Review</h4>
+            <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+              <!-- <ul class="quick-links">
+                      <li><a href="#">ICE Market data</a></li>
+                      <li><a href="#">Own analysis</a></li>
+                      <li><a href="#">Historic market data</a></li>
+                    </ul> -->
+              <ul class="quick-links ml-auto">
+                <!-- <li><a href="#">Settings</a></li> -->
+                <!-- <li><a href="#">Analytics</a></li> -->
+                <button
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#addModal"
+                  class="btn btn-primary btn-rounded btn-fw"
+                >
+                  <i class="mdi mdi-plus"></i>Add Review
+                </button>
+
+                <!-- <li><a href="#">Watchlist</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+          <div class="card">
+            <div style="overflow-x: scroll;" class="card-body">
+              <h4 class="card-title">Customer Review Detail</h4>
+              <!-- <p class="card-description"> Add class <code>.table-bordered</code> </p> -->
+              <table id="" class="table table-bordered">
+                <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Message</th>
+        <th scope="col">Email</th>
+         <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+            
+      {% for review in data.items%}
+            <tr>
+              <td>{{forloop.counter}}</td>
+              <td>{{review.name}}</td>
+              <td>{{review.message}}</td>
+              <td>{{review.email}}</td>
+             
+               <td>
+                    <i
+                    style="cursor: pointer; color: green; font-size: large;"
+                    class="mdi mdi-pencil"
+                    data-toggle="modal"
+                    data-target="#updateModal{{ review.id }}"
+                  ></i>
+                  <i
+                    style="cursor: pointer; color: red;font-size: large;"
+                    class="mdi mdi-delete"
+                    data-toggle="modal"
+                    data-target="#delModel{{ review.id }}"
+                  ></i>
+                   <!-- Edit Modal -->
+
+            <div class="modal fade" id="updateModal{{ review.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"  aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document" >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">
+                    Update Blog
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form method="POST" action="{% url 'customerreview-update' review.slug %}" class="forms-sample" enctype="multipart/form-data"   >
+                    {% csrf_token %}
+                   
+                    <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Name</label>
+                        <div class="col-sm-9">
+                          <input name="name"type="text" value="{{ review.name }}" class="form-control" id="exampleInputEmail2"
+                            placeholder="Enter your Name"
+                          />
+                        </div>
+                      </div>
+                    <div class="form-group row">
+                      <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Message</label>
+                      <div class="col-sm-9">
+                        <input name="message"value="{{review.message }}" type="text"class="form-control" id="exampleInputEmail2" placeholder="Enter Message" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label
+                        for="exampleInputEmail2"
+                        class="col-sm-3 col-form-label"
+                        >Email</label
+                      >
+                      <div class="col-sm-9">
+                        <input name="email" value="{{review.email}}" type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter Email"/>
+                      </div>
+                    </div>
+                   <br>
+                   <br>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                      Save changes
+                    </button>
+                    <!-- <button type="submit" class="btn btn-success mr-2">Submit</button>
+      <button class="btn btn-light" data-dismiss="modal">Cancel</button> -->
+                  </form>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Delete Modal -->
+
+          <div
+          class="modal fade"
+          id="delModel{{ review.id }}"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Delete Blog
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>You Sure Want to Delete this?</p>
+              </div>
+              <div class="modal-footer">
+                
+                <form method="POST" action="{% url 'customerreview-delete' review.slug %}" class="forms-sample" enctype="multipart/form-data"   >
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </form>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+      </div>
+
+
+<!-- Add Modal -->
+<div
+class="modal fade"
+id="addModal"
+tabindex="-1"
+role="dialog"
+aria-labelledby="exampleModalCenterTitle"
+aria-hidden="true"
+>
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="exampleModalLongTitle">Add Collabortion</h5>
+<button
+  type="button"
+  class="close"
+  data-dismiss="modal"
+  aria-label="Close"
+>
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<div class="stretch-card">
+  <div style="border: none;" class="card">
+    <div class="card-body">
+      <!-- <h4 class="card-title">Add Blog Form</h4> -->
+      <!-- <p class="card-description"> Horizontal form layout </p> -->
+      <form
+        method="POST"
+        action="{% url 'customerreview-add' %}"
+        class="forms-sample"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <div class="form-group row">
+          <label
+            for="exampleInputEmail2"
+            class="col-sm-3 col-form-label"
+            >Name</label
+          >
+          <div class="col-sm-9">
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail2"
+              placeholder="Enter Name"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label
+            for="exampleInputEmail2"
+            class="col-sm-3 col-form-label"
+            >Message</label
+          >
+          <div class="col-sm-9">
+            <input
+              name="message"
+              type="text"
+              class="form-control"
+              id="examplemessage"
+              placeholder="Enter Message"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label
+            for="exampleInputEmail2"
+            class="col-sm-3 col-form-label"
+            >Email</label
+          >
+          <div class="col-sm-9">
+            <input
+              name="email"
+              type="text"
+              class="form-control "
+              id="exampleInputEmail2"
+              placeholder="Enter Email"
+            />
+          </div>
+        </div>
+
+       
+        <br />
+        <br />
+        
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+        <button type="submit" class="btn btn-primary">
+          Save changes
+        </button>
+        <!-- <button type="submit" class="btn btn-success mr-2">Submit</button>
+        <button class="btn btn-light" data-dismiss="modal">Cancel</button> -->
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</tr>
+
+</tbody>
+</table>
+</div>
+<!-- <div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-primary">Save changes</button>
+</div> -->
+</div>
+</div>
+</div>
+
+<!-- content-wrapper ends -->
+<!-- partial:partials/_footer.html -->
+{%include 'dashboard/include/footer.html'%}
+</div>

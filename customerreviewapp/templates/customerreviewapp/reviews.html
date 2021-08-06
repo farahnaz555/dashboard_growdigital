@@ -1,0 +1,39 @@
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+/>
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+
+<h1 class="p-3 mb-2 bg-info text-white text-center">  Reviews  </h1>
+<hr>
+<div class="container">
+        <table class="table table-hover">
+         <thead class="thead-dark">
+           <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Message</th>
+                
+           </tr>
+         </thead>
+         <tbody>
+
+
+{% for customerreviewpage in customerreviewview %}
+<tr>
+    <th>{{ customerreviewpage.name }}</th>
+    <th>{{ customerreviewpage.message }}</th>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+    </div>
+  </main>
+</div>
+</div>
+{% endblock content %}
+

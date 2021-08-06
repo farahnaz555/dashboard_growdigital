@@ -1,0 +1,318 @@
+{%load static %} {%include 'website/include/layout.html'%}
+
+{%include 'website/include/header.html'%}
+<div class="wraper"> 
+ <!-- ====== Banner Start ====== -->
+ <section id="inner-banner">
+    <div class="container">
+      <div class="row">
+        <div class="inner-heading">
+          <h2>Business Partner</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Business Partner</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Banner End ====== --> 
+  
+  <!-- ====== Blog Posts Start ====== -->
+  <section id="blog-with-sidebar">
+    <div class="container">
+      <h3 class="d-none">heading</h3>
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="row">
+            
+          <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 posts">
+              {% for p in data.items %}
+            <div class="item blog_card card_mr_bt d-flex">
+              <div class="post-img"> <img src="{{p.image.url}}" alt="Post" /> </div>
+              <div class="post-detail">
+                <h5><a href="blog-detail.html">{{p.short_description}}</a></h5>
+                <div class="post-status">
+                  <ul>
+                    <li><i class="flat flaticon-folder"></i> <span><a href="javascript:void(0)">{{p.title}}</a></span></li>
+                    <li><i class="flat flaticon-chat"></i> <span>20</span></li>
+                    <li><i class="flat flaticon-calendar"></i> <span>05/10/2018</span></li>
+                  </ul>
+                </div>
+                <div class="description">
+                  <p>{{p.long_description}}</p>
+                  <a href="blog-detail.html" title="View More">View More</a> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            {% endfor %}
+            <div class="item blog_card card_mr_bt d-flex">
+              <div class="post-img"> <img src="{{p.image.url}}" alt="Post" /> </div>
+              <div class="post-detail">
+                <h5><a href="blog-detail.html">If you are going to use a passage of Lorem Ipsum</a></h5>
+                <div class="post-status">
+                  <ul>
+                    <li><i class="flat flaticon-folder"></i> <span><a href="javascript:void(0)">UI Developer</a></span></li>
+                    <li><i class="flat flaticon-chat"></i> <span>20</span></li>
+                    <li><i class="flat flaticon-calendar"></i> <span>05/10/2018</span></li>
+                  </ul>
+                </div>
+                <div class="description">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                  <a href="blog-detail.html" title="View More">View More</a> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="item blog_card card_mr_bt d-flex">
+              <div class="post-img"> <img src="{%static 'img/blog-post-3.jpg'%}" alt="Post" /> </div>
+              <div class="post-detail">
+                <h5><a href="blog-detail.html">There are many variations of passages</a></h5>
+                <div class="post-status">
+                  <ul>
+                    <li><i class="flat flaticon-folder"></i> <span><a href="javascript:void(0)">UI Developer</a></span></li>
+                    <li><i class="flat flaticon-chat"></i> <span>20</span></li>
+                    <li><i class="flat flaticon-calendar"></i> <span>05/10/2018</span></li>
+                  </ul>
+                </div>
+                <div class="description">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                  <a href="blog-detail.html" title="View More">View More</a> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="item blog_card card_mr_bt d-flex">
+              <div class="post-img"> <img src="{%static 'img/blog-post-4.jpg'%}" alt="Post" /> </div>
+              <div class="post-detail">
+                <h5><a href="blog-detail.html">Lorem Ipsum has been the industry's standard</a></h5>
+                <div class="post-status">
+                  <ul>
+                    <li><i class="flat flaticon-folder"></i> <span><a href="javascript:void(0)">UI Developer</a></span></li>
+                    <li><i class="flat flaticon-chat"></i> <span>20</span></li>
+                    <li><i class="flat flaticon-calendar"></i> <span>05/10/2018</span></li>
+                  </ul>
+                </div>
+                <div class="description">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                  <a href="blog-detail.html" title="View More">View More</a> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="item blog_card card_mr_bt d-flex">
+              <div class="post-img"> <img src="{%static 'img/blog-post-5.jpg'%}" alt="Post" /> </div>
+              <div class="post-detail">
+                <h5><a href="blog-detail.html">If you are going to use a passage of Lorem Ipsum</a></h5>
+                <div class="post-status">
+                  <ul>
+                    <li><i class="flat flaticon-folder"></i> <span><a href="javascript:void(0)">UI Developer</a></span></li>
+                    <li><i class="flat flaticon-chat"></i> <span>20</span></li>
+                    <li><i class="flat flaticon-calendar"></i> <span>05/10/2018</span></li>
+                  </ul>
+                </div>
+                <div class="description">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                  <a href="blog-detail.html" title="View More">View More</a> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="item blog_card card_mr_bt d-flex">
+              <div class="post-img"> <img src="{%static 'img/blog-post-6.jpg'%}" alt="Post" /> </div>
+              <div class="post-detail">
+                <h5><a href="blog-detail.html">There are many variations of passages</a></h5>
+                <div class="post-status">
+                  <ul>
+                    <li><i class="flat flaticon-folder"></i> <span><a href="javascript:void(0)">UI Developer</a></span></li>
+                    <li><i class="flat flaticon-chat"></i> <span>20</span></li>
+                    <li><i class="flat flaticon-calendar"></i> <span>05/10/2018</span></li>
+                  </ul>
+                </div>
+                <div class="description">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                  <a href="blog-detail.html" title="View More">View More</a> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+        
+          </div>
+          
+          <aside class="col-lg-3 col-md-3 col-sm-12 col-xs-12 sidebar right">
+            <div class="widget">
+              <div class="sidebar_heading">
+                <h5>Search</h5>
+                <div class="separator left-align ">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="widget-content">
+              <div class="search">
+                <form action="https://wpshopmart.com/index.html">
+                  <div class="form-group">
+                    <input type="text" placeholder="Search..." />
+                    <button type="submit"> <i class="flat flaticon-search"></i> </button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+            <div class="widget">
+              <div class="sidebar_heading">
+                <h5>Recent Posts</h5>
+                <div class="separator left-align ">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="widget-content">
+                <div class="post-item">
+                  <div class="post-img"> <img src="{{p.image.url}}" alt="post" /> </div>
+                  <div class="post-content">
+                    <a href="blog-detail.html">Lorem Ipsum is simply dummy text of the printing </a>
+                    <div class="post-status"> <i class="flat flaticon-calendar"></i> <span>05/10/2018</span> </div>
+                  </div>
+                </div>
+                <div class="post-item">
+                  <div class="post-img"> <img src="{%static 'img/recent-post-thumb-2.jpg'%}" alt="post" /> </div>
+                  <div class="post-content">
+                    <a href="blog-detail.html">Standard dummy text ever since the 1500s</a>
+                    <div class="post-status"> <i class="flat flaticon-calendar"></i> <span>05/10/2018</span> </div>
+                  </div>
+                </div>
+                <div class="post-item">
+                  <div class="post-img"> <img src="{%static 'img/recent-post-thumb-3.jpg'%}" alt="post" /> </div>
+                  <div class="post-content">
+                    <a href="blog-detail.html">The leap into electronic typesetting</a>
+                    <div class="post-status"> <i class="flat flaticon-calendar"></i> <span>05/10/2018</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="widget">
+              <div class="sidebar_heading">
+                <h5>Tags</h5>
+                <div class="separator left-align ">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="widget-content">
+                <div class="tags">
+                  <ul>
+                    <li><a href="javascript:void(0)" title="Bootstrap">Bootstrap</a></li>
+                    <li><a href="javascript:void(0)" title="HTML">HTML</a></li>
+                    <li><a href="javascript:void(0)" title="CSS">CSS</a></li>
+                    <li><a href="javascript:void(0)" title="Jquery">Jquery</a></li>
+                    <li><a href="javascript:void(0)" title="Web Development">Web Development</a></li>
+                    <li><a href="javascript:void(0)" title="Creative">Creative</a></li>
+                    <li><a href="javascript:void(0)" title="HTML">HTML</a></li>
+                    <li><a href="javascript:void(0)" title="CSS">CSS</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="widget">
+              <div class="sidebar_heading">
+                <h5>Quick Connect</h5>
+                <div class="separator left-align ">
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="widget-content">
+                <div class="quick-connect-form">
+                  <form action="https://wpshopmart.com/index.html">
+                    <div class="form-group">
+                      <input type="text" placeholder="Full Name" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Email" />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="Phone No." />
+                    </div>
+                    <div class="form-group">
+                      <input type="text" placeholder="description" />
+                    </div>
+                    <div class="form-group">
+                      <textarea placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit">Send Message <i class="flat flaticon-plane"></i></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </aside>
+           
+        </div>
+<nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1"><i class="flat flaticon-back"></i></a> </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"> <a class="page-link" href="#"><i class="flat flaticon-arrow"></i></a> </li>
+        </ul>
+      </nav>
+      </div>
+     
+    </div>
+  </section>
+  <!-- ====== Blog Posts End ====== --> 
+  
+<!-- ====== Counter Start ====== -->
+<section id="counter">
+  <div class="container">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="counter-column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="count_icon"> <i class="flat flaticon-happiness"></i> </div>
+          <div class="counter_content">
+            <h2><span class="counter">200</span>+</h2>
+            <div class="title">Happy Client</div>
+          </div>
+        </div>
+        <div class="counter-column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="count_icon"> <i class="flat flaticon-coffee-cup"></i> </div>
+          <div class="counter_content">
+            <h2><span class="counter">750</span>+</h2>
+            <div class="title">Cups of Coffee</div>
+          </div>
+        </div>
+        <div class="counter-column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="count_icon"> <i class="flat flaticon-like"></i> </div>
+          <div class="counter_content">
+            <h2><span class="counter">1800</span>+</h2>
+            <div class="title">Projects Done</div>
+          </div>
+        </div>
+        <div class="counter-column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+          <div class="count_icon"> <i class="flat flaticon-building"></i> </div>
+          <div class="counter_content">
+            <h2><span class="counter">15</span></h2>
+            <div class="title">Office Locations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</section>
+<!-- ====== Counter End ====== --> 
+</div>
+</div>
+{%include 'website/include/footer.html'%}

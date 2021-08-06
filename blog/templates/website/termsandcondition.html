@@ -1,0 +1,11 @@
+{% extends 'bizlerapp/base.html' %} {% load static %} {% block body %}
+
+<h1>Terms And Condition</h1>
+<hr />
+
+{% for termsncpage in termsandconditionview %}
+
+<h3>{{ termsncpage.title }}</h3>
+<p>{{ termsncpage.description }}</p>
+
+{% endfor %}

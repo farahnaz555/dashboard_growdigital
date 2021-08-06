@@ -1,0 +1,24 @@
+{% load static %}
+<hr>
+
+<h1>  Price And Packages  </h1>
+<hr>
+
+
+{% for priceandpackagesmodel in priceandpackagesview %}
+
+<h3>{{ priceandpackagesmodel.title }} </h3>
+<h5>  Package Description </h5>
+<p>{{ priceandpackagesmodel.description }}</p>
+<br>
+<h5>  Package Price </h5>
+<p>{{ priceandpackagesmodel.price }} $</p>
+<br>
+<h5>  Package Purchases </h5>
+
+<p>{{ priceandpackagesmodel.quantity_purchased }}</p>
+
+
+
+
+{% endfor %}

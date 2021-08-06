@@ -1,0 +1,42 @@
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+/>
+
+{% load static %}
+<hr />
+
+<h1 class="p-3 mb-2 bg-info text-white text-center">Business Partner</h1>
+<hr />
+
+<div class="container">
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Image</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for businesspartnerpage in businesspartnerview %}
+      <tr>
+        <td>{{ businesspartnerpage.title }}</td>
+        <td>{{ businesspartnerpage.short_description }}</td>
+        <td>{{ businesspartnerpage.long_description }}</td>
+        <td>
+          <img
+            src="{{ businesspartnerpage.image.url }}"
+            height="50px"
+            width="50px"
+          />
+        </td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

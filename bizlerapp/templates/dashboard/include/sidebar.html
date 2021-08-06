@@ -1,0 +1,108 @@
+{%load static %}
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item nav-profile">
+      <a href="#" class="nav-link">
+        <div class="profile-image">
+          <img
+            class="img-xs rounded-circle"
+            src="{% static 'dashboard/images/faces/face8.jpg'%}"
+            alt="profile image"
+          />
+          <div class="dot-indicator bg-success"></div>
+        </div>
+        <div class="text-wrapper">
+          <p class="profile-name">{{ username }}</p>
+          <!-- <p class="designation">Premium user</p>-->
+        </div>
+      </a>
+    </li>
+    <!--<li class="nav-item nav-category">Main Menu</li>-->
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'dashboard' %}">
+        <i class="menu-icon typcn typcn-document-text"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-toggle="collapse"
+        href="{% url 'blogview' %}"
+        aria-expanded="false"
+        aria-controls="ui-basic"
+      >
+        <i class="menu-icon typcn typcn-coffee"></i>
+        <span class="menu-title" href="">Blog</span>
+        <i class="menu-arrow"></i>
+      </a>
+    </li>
+    <!-- <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">-->
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'servicesinfo' %}">Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">About us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'portfolioinfo' %}">Portfolio</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'careerinfo' %}">
+        <i class="menu-icon typcn typcn-shopping-bag"></i>
+        <span class="menu-title">Career page</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="pages/charts/chartjs.html">
+        <i class="menu-icon typcn typcn-th-large-outline"></i>
+        <span class="menu-title">Charts</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'businesspartnerinfo' %}">
+        <i class="menu-icon typcn typcn-bell"></i>
+        <span class="menu-title">Business Partner</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'customerreviewinfo' %}">
+        <i class="menu-icon typcn typcn-user-outline"></i>
+        <span class="menu-title">Customer Review</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        data-toggle="collapse"
+        href="{% url 'pricinginfo' %}"
+        aria-expanded="false"
+        aria-controls="auth"
+      >
+        <i class="menu-icon typcn typcn-document-add"></i>
+        <span class="menu-title">Price and Packages</span>
+        <i class="menu-arrow"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'collabortioninfo' %}">
+        <i class="menu-icon typcn typcn-document-text"></i>
+        <span class="menu-title">Consultation</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'pricinginfo' %}">
+        <i class="menu-icon typcn typcn-document-text"></i>
+        <span class="menu-title">Price and Packages</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'ourteaminfo' %}">
+        <i class="menu-icon typcn typcn-document-text"></i>
+        <span class="menu-title">Our Team</span>
+      </a>
+    </li>
+  </ul>
+</nav>

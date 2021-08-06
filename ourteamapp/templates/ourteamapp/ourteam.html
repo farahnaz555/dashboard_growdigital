@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+{% load static %}
+
+
+<h1 class="p-3 mb-2 bg-info text-white text-center">  Our Team  </h1>
+<hr>
+<div class="container">
+     
+        <table class="table table-hover">
+         <thead class="thead-dark">
+           <tr>
+             
+             <th scope="col">Title</th>
+             <th scope="col">Designation</th>
+             <th scope="col">Image</th>
+             <th scope="col">Description</th>
+             <th scope="col">Actions</th>
+           </tr>
+         </thead>
+         <tbody>
+
+{% for ourteampage in ourteamview %}
+<tr>
+
+<td>{{ ourteampage.title }}</td>
+<td>{{ ourteampage.designation }}</td>
+<br>
+<td><img src="{{ ourteampage.image.url }}" height="50px" width="50px"></td>
+<br>
+<td>{{ ourteampage.description }}</td>
+
+{% endfor %}
+</tr>    
+
+</tbody>
+</table>
+  </div>
+</main>
+</div>
+</div>
+
+
+

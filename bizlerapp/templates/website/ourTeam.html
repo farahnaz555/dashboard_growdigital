@@ -1,0 +1,344 @@
+{%load static %} {%include 'website/include/layout.html'%}
+
+{%include 'website/include/header.html'%}
+<div class="wraper"> 
+
+<!-- ====== Banner Start ====== -->
+<section id="inner-banner" class="index-3">
+    <div class="container">
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="inner-heading">
+          <h2>Our Team</h2>
+          <div class="separator left-align">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="index-2.html" title="Home">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Our Team</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Banner End ====== --> 
+  
+  <!-- ====== Services Start ====== -->
+ <section id="our_team" class="inner index-3">
+  <div id="ui-ux">
+    <div class="container">
+      <div class="section_heading">
+        <h2>Our Team</h2>
+        <div class="separator">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      {% for t in data.items %}
+        <div class="col-lg-12 col-md-12 col-xs-12 content_sec">
+          <div class="row">
+             
+            <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}
+                " alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+           
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+ <!--  <div id="web-developer" class="gray-bg">
+    <div class="container">
+      <div class="section_heading">
+        <h2>Web Developers</h2>
+        <div class="separator">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      
+        <div class="col-lg-12 col-md-12 col-xs-12 content_sec">
+          <div class="row">
+             
+           <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>--> 
+  <!--<div id="seo-smo">
+    <div class="container">
+      <div class="section_heading">
+        <h2>SEO/SMO</h2>
+        <div class="separator">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      
+        <div class="col-lg-12 col-md-12 col-xs-12 content_sec">
+          <div class="row">
+          
+           <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}l">{{t.title}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="item col-lg-6 col-md-6 col-md-12 col-xs-12">
+            <div class="client_dp"> <img src="{{t.image.url}}" alt="Team" /> </div>
+            <div class="team-card">
+              <div class="name_designation">
+                <h5><a href="{% url 'teamdetail' %}">{{t.title}}}</a></h5>
+                <span>{{t.designation}}</span> </div>
+              <div class="description">
+                <p>{{t.description}}</p>
+              </div>
+              <div class="social_links">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+  -->
+</section>
+  <!-- ====== Services End ====== --> 
+</div>
+</div>
+{%include 'website/include/footer.html'%}

@@ -1,0 +1,172 @@
+{%load static %} {%include 'website/include/layout.html'%}
+
+{%include 'website/include/header.html'%}
+<div class="wraper"> 
+<!-- ====== Banner Start ====== -->
+<section id="inner-banner">
+    <div class="container">
+      <div class="row">
+        <div class="inner-heading">
+          <h2>Our Member Detail</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="team.html">Our Team</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Our Member Detail</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Banner End ====== --> 
+  
+  <!-- ====== Team Member Detail Start ====== -->
+  <section id="team_member_detail">
+    <div class="container">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="member-pic"> <img src="{%static 'img/member_dp.jpg'%}" alt="Member" /> </div>
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+            <div class="about_member">
+              <div class="name_designation">
+                <h3>Tania Andrew</h3>
+                <h6>Web Designer</h6>
+              </div>
+              <div class="social_media">
+                <ul>
+                  <li><a href="javascript:void(0)" title="Facebook" ><i class="flat flaticon-facebook-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Twitter" ><i class="flat flaticon-twitter"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Google" ><i class="flat flaticon-google-plus-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Linkedin" ><i class="flat flaticon-linkedin-logo"></i></a></li>
+                  <li><a href="javascript:void(0)" title="Instagram" ><i class="flat flaticon-instagram"></i></a></li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+              <div class="description">
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <ul>
+                <li> <i class="flat flaticon-phone-receiver"></i> 0123-456-789, 0123-456-789 </li>
+                <li> <i class="flat flaticon-earth"></i> www.example.com </li>
+                <li> <i class="flat flaticon-mail-black-envelope-symbol"></i>taniaandrew@gmail.com </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 work-status">
+          <div class="row">
+            <div class="counter-column col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="counter_content">
+                <div class="display"><span class="counter">95</span>%</div>
+                <div class="title">CSS</div>
+              </div>
+            </div>
+            <div class="counter-column col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="counter_content">
+                <div class="display"><span class="counter">80</span>%</div>
+                <div class="title">HTML5</div>
+              </div>
+            </div>
+            <div class="counter-column col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="counter_content">
+                <div class="display"><span class="counter">70</span>%</div>
+                <div class="title">Jquery</div>
+              </div>
+            </div>
+            <div class="counter-column col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="counter_content">
+                <div class="display"><span class="counter">75</span>%</div>
+                <div class="title">Sass/Less</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Team Member Detail End ====== --> 
+  
+  <!-- ====== Recent Project Start ====== -->
+  <section id="portfolio" class="gray-bg">
+    <div class="container">
+      <div class="section_heading">
+        <h2>Recent <span>Work</span></h2>
+        <div class="separator">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-xs-12 content_sec">
+        <div class="row">
+               <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item design development">
+                          <div class="project portfolio-inner">
+                              <img src="{%static 'img/portfolio/thumbnail/project_1.jpg'%}" alt="project">
+                              <div class="label">
+                                  <div class="label-text"> <a href="portfolio-detail.html" class="text-title">Photography</a> </div>
+                                  <div class="label-bg"></div>
+                              </div>
+                              <div class="zoom"> <a href="{%static 'img/portfolio/large/project_1.jpg'%}" class="popup-box"  data-lightbox="image" data-title="Project"> <i class="flat flaticon-magnifying-glass"></i> </a> </div>
+                          </div>
+                      </div>
+  
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item app logo">
+                          <div class="project portfolio-inner">
+                              <img src="{%static 'img/portfolio/thumbnail/project_2.jpg'%}" alt="project">
+                              <div class="label">
+                                  <div class="label-text"> <a href="portfolio-detail.html" class="text-title">Ecommerce</a> </div>
+                                  <div class="label-bg"></div>
+                              </div>
+                              <div class="zoom"> <a href="{%static 'img/portfolio/large/project_2.jpg'%}" class="popup-box"  data-lightbox="image" data-title="Project"> <i class="flat flaticon-magnifying-glass"></i> </a> </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item development logo">
+                          <div class="project portfolio-inner">
+                              <img src="{%static 'img/portfolio/thumbnail/project_3.jpg'%}" alt="project">
+                              <div class="label">
+                                  <div class="label-text"> <a href="portfolio-detail.html" class="text-title">Education</a>
+                                  </div>
+                                  <div class="label-bg"></div>
+                              </div>
+                              <div class="zoom"> <a href="{%static 'img/portfolio/large/project_3.jpg'%}" class="popup-box"  data-lightbox="image" data-title="Project"> <i class="flat flaticon-magnifying-glass"></i> </a> </div>
+                          </div>
+                      </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Recent Project End ====== --> 
+  
+  <!-- ====== Candidate Contact Start ====== -->
+  <section id="member">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 heading">
+              <h3>Want To Join <span>Our Team</span></h3>
+              <div class="q-mark">?</div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-6 col-xs-12 meeting">
+              <div class="meeting_icon"> <i class="flat flaticon-group-meeting"></i> </div>
+              <div class="meeting_content">If you're Creative, passionate and enthusiatic about helping customers, <a href="contact-us-1.html">We want to meet you!</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </section>
+  <!-- ====== Candidate Contact End ====== --> 
+  </div>
+</div>
+{%include 'website/include/footer.html'%}
